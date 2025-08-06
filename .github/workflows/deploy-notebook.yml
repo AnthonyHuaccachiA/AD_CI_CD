@@ -20,7 +20,7 @@ jobs:
       run: |
         ORIGIN_HOST=${{ secrets.DATABRICKS_ORIGIN_HOST }}
         ORIGIN_TOKEN=${{ secrets.DATABRICKS_ORIGIN_TOKEN }}
-        NOTEBOOK_BASE="/Workspace/Users/smartdata0707@outlook.com/source_ntbk"
+        NOTEBOOK_BASE="/Workspace/Users/ahuaccachi28_gmail.com#ext#@ahuaccachi28gmail.onmicrosoft.com/source_ntbk"
         NOTEBOOKS=("mount_adls_storage")  # Agrega más según necesitesas
 
         mkdir -p notebooks_to_deploy
@@ -37,7 +37,7 @@ jobs:
       run: |
         DEST_HOST=${{ secrets.DATABRICKS_DEST_HOST }}
         DEST_TOKEN=${{ secrets.DATABRICKS_DEST_TOKEN }}
-        DEST_BASE="/py"
+        DEST_BASE="/py/scripts/"
 
         for file in notebooks_to_deploy/*.py; do
           name=$(basename "$file" .py)
